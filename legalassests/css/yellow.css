@@ -1,0 +1,226 @@
+::selection {
+    background: rgb(246, 200, 21);
+}
+
+.navbar-default .navbar-nav > .active > a {
+    color: rgb(246, 200, 21) !important;
+}
+
+    .navbar-default .navbar-nav > .active > a:hover {
+        color: rgb(246, 200, 21) !important;
+    }
+
+    .navbar-default .navbar-nav > .active > a:focus {
+        color: rgb(246, 200, 21) !important;
+    }
+
+h1.light {
+    color: rgb(246, 200, 21) !important;
+}
+
+.about i {
+    background: rgb(246, 200, 21);
+}
+
+.sub-a.effect-1.hovicon:hover {
+    background: rgb(246, 200, 21);
+}
+
+.effect-1.hovicon {
+    background: rgb(246, 200, 21);
+}
+
+    .effect-1.hovicon::after {
+        box-shadow: 0px 0px 0px 4px #f6c815;
+    }
+
+.team .col-md-4 .team-image-sec .img-overlay {
+    background: rgba(246, 200, 21, 0.79);
+}
+
+.entry .overlay {
+    background: rgba(246, 200, 21, 0.79);
+}
+
+.team .col-md-4 .team-image-sec li a {
+    color: rgb(246, 200, 21);
+}
+
+.team-detail-sec h3 {
+    color: rgb(246, 200, 21);
+}
+.da-thumbs li article {
+    background: rgba(246, 200, 21, 0.79);
+}
+
+#second .fa-twitter {
+    color: rgb(246, 200, 21);
+}
+
+.testimonials span {
+    color: rgb(246, 200, 21);
+}
+.sponsors h1.sponsor {
+    color: rgb(246, 200, 21) !important;
+}
+
+.pressroom .left-text span.title {
+    color: rgb(246, 200, 21);
+}
+
+.pressroom .left-text a {
+    color: rgb(246, 200, 21);
+}
+
+.pressroom .right-text span.title {
+    color: rgb(246, 200, 21);
+}
+
+.pressroom .right-text a {
+    color: rgb(246, 200, 21);
+}
+
+.contact .form {
+    background: no-repeat bottom rgb(255, 255, 255);
+    border-top-color: rgb(246, 200, 21);
+    border-top-width: 2px;
+    border-top-style: solid;
+}
+
+.submit_btn {
+    background: rgb(246, 200, 21);
+}
+
+#fifth {
+    border-bottom-color: rgb(246, 200, 21);
+    border-bottom-width: 10px;
+    border-bottom-style: solid;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: rgb(246, 200, 21);
+}
+
+.navbar-default .navbar-nav > li > a:focus {
+    color: rgb(246, 200, 21);
+}
+
+.skill-bar-percent {
+    background: rgb(246, 200, 21);
+}
+
+.QLoader {
+    background-color: rgb(246, 200, 21);
+}
+
+.skillbar-bar {
+    background: rgb(227, 183, 12);
+}
+
+.picker-off i {
+    color: rgb(227, 183, 12);
+}
+
+.big_blue.caption {
+    color: rgb(227, 183, 12);
+}
+
+.button:hover {
+    border-color: rgb(227, 183, 12) !important;
+}
+
+.fancybox-overlay {
+    background: rgba(246, 200, 21, 0.79) !important;
+}
+
+.team-sec h4 {
+    color: rgb(227, 183, 12) !important;
+}
+
+.social-icons a:hover {
+    background: rgb(227, 183, 12);
+}
+
+.dark-bg.team-sec {
+    background: rgb(227, 183, 12);
+}
+
+    .dark-bg.team-sec h4 {
+        color: rgb(255, 255, 255) !important;
+    }
+
+    .dark-bg.team-sec a {
+        background: rgb(255, 255, 255) !important;
+    }
+
+    .dark-bg.team-sec i {
+        color: rgb(51, 51, 51);
+    }
+
+    .dark-bg.team-sec a:hover i {
+        color: rgb(227, 183, 12) !important;
+    }
+
+@media all and (max-width:767px) {
+    .navbar-default .navbar-nav > .active > a {
+        border-bottom-color: rgb(246, 200, 21) !important;
+        border-bottom-width: 3px !important;
+        border-bottom-style: solid !important;
+    }
+
+        .navbar-default .navbar-nav > .active > a:hover {
+            border-bottom-color: rgb(246, 200, 21) !important;
+            border-bottom-width: 3px !important;
+            border-bottom-style: solid !important;
+        }
+
+        .navbar-default .navbar-nav > .active > a:focus {
+            border-bottom-color: rgb(246, 200, 21) !important;
+            border-bottom-width: 3px !important;
+            border-bottom-style: solid !important;
+        }
+
+    .navbar-default .navbar-nav > li > a:hover {
+        color: rgb(246, 200, 21) !important;
+        border-bottom-color: rgb(246, 200, 21) !important;
+        border-bottom-width: 3px !important;
+        border-bottom-style: solid !important;
+    }
+
+    .navbar-default .navbar-nav > li > a:focus {
+        color: rgb(246, 200, 21) !important;
+        border-bottom-color: rgb(246, 200, 21) !important;
+        border-bottom-width: 3px !important;
+        border-bottom-style: solid !important;
+    }
+}
+
+.blog .tags a:hover {
+    border: 1px solid rgb(246, 200, 21);
+    border-image: none;
+    color: rgb(246, 200, 21);
+}
+
+.blog a.comment {
+    color: rgb(246, 200, 21);
+}
+
+.blog .comments a.date {
+    color: rgb(246, 200, 21);
+}
+
+.blog .comments a {
+    color: rgb(246, 200, 21);
+}
+
+.blog .comment-form input[type=submit] {
+    background: rgb(246, 200, 21);
+}
+
+.blog .recent-post .post a {
+    color: rgb(246, 200, 21);
+}
+
+.blog .archive a {
+    color: rgb(246, 200, 21);
+}

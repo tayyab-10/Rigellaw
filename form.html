@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Form Submission</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="icon" type="image/png" href="legalassests/images/icon.png">
+    <meta name="author" content="Muhammad Nawaz" />
+    <meta name="keywords" content="A Better Legal System,A Broader Perspective.A Business Approach to Legal Service,A Heritage of Results,A large firm with a human touch,A Small Firm That Acts Big,A Tradition of Excellence,Aligned for Excellence,All We Do is Work,Beyond Results,Breakthrough Law,Building Solutions,Built on relationships,Business is our Signature,Business people. Business law, Best Lawyers in Islamabad, Law Firm Islamabad, Law Firm Pakistan" />
+    <meta name="description" content="Corporate & Commercial Lawyers: Rigel Law is originally based in Pakistan and is the registered Law firm. Its foundations have been laid on the basic principles of integrity and excellence for it to shine above all. For every matter at hand, we believe in thorough examination of its facts and relevant laws to provide the best possible advice to our clients in a manner that is effective and efficient" />
+    <link id="color" href="legalassests/css/yellow.css" rel="stylesheet" type="text/css" />
+    <link rel="apple-touch-icon" href="legalassests/images/icon.png" />
+    <link href="legalassests/css/wavex.css" rel="stylesheet" />
+    <link href="legalassests/css/google-maps.css" rel="stylesheet" />
+    <link href="legalassests/css/web-fonts.css" rel="stylesheet" />
+    <link href="legalassests/css/font-awesome.css" rel="stylesheet" />
+    <link href="legalassests/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="legalassests/css/parallax.css" rel="stylesheet" type="text/css" />
+    <link href="legalassests/css/header.css" rel="stylesheet" type="text/css" />
+    <link href="legalassests/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="legalassests/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="legalassests/css/form.css" rel="stylesheet" type="text/css" />
+    <link href="legalassests/css/queryLoader.css" rel="stylesheet" type="text/css" />
+    <link href="legalassests/css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />
+    <style>
+        #toTop {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            padding: 5px 10px;
+            cursor: pointer;
+            display: none;
+            z-index: 9999;
+        }
+		blink {
+        animation: blinker 1.5s linear infinite;
+        color: green;
+       }
+		@keyframes blinker {  
+        50% { opacity: 0; }
+       }
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33%;
+            padding: 10px;
+            text-align: center;
+        }
+
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /*btn-primary*/
+        .btn-primary {
+            color: #fff;
+            background-color: #fcbb3c;
+            border-color: #fba90a;
+        }
+
+            .btn-primary:hover,
+            .btn-primary:focus,
+            .btn-primary.focus,
+            .btn-primary:active,
+            .btn-primary.active,
+            .open > .dropdown-toggle.btn-primary {
+                color: #e89b04;
+                background: transparent;
+                border: 2px solid #e0e0e0;
+            }
+
+        /*common style for all btn*/
+        .btn {
+            border: 2px solid transparent;
+            padding: 6px 13px;
+            border-radius: 2px;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+        .btn-primary:hover,
+        .btn-success:hover,
+        .btn-primary.active,
+        .btn-success.active {
+            background: transparent;
+            border: 2px solid #e0e0e0;
+        }
+
+        .btn-link {
+            color: #fcbb3c;
+        }
+
+            .btn-link:hover {
+                color: #e89b04;
+            }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn.active.focus {
+            outline: none;
+        }
+
+        .op-content {
+            display: table-cell !important;
+            vertical-align: middle !important;
+            height: 400px;
+        }
+
+            .op-content p {
+                font-size: 40px;
+                font-weight: 900;
+                text-transform: capitalize;
+                margin-left: 40px;
+            }
+
+        .icon {
+            position: relative;
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 140px;
+            margin-left: 100px;
+        }
+
+        .op-content span {
+            font-size: 80px;
+        }
+        .law-form {
+            padding-top: 3%;
+        }
+    
+        @media (max-width: 768px) {
+            .law-form {
+                padding-top: 9% !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="warp"></div>
+        <!-- Header -->
+        <div class="subMenu subMenu2" style="top: 40px; position: absolute;">
+            <div class="container">
+                <nav class="navbar navbar-default" role="navigation">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img class="logo" alt="Home Page Icon" src="legalassests/images/logo.jpg" />
+    
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a class="subNavBtn"  id="sTop" href="index.html">Home</a></li>
+                            <li><a id="s4" href="form.html">Submit Form</a></li>
+                            <li><a id="s1" href="about.html">About Us</a></li>
+                            <li><a id="s2" href="/legalassests/Practice.html">Practice&nbsp;&nbsp;Areas</a></li>
+                            <li><a id="s3" href="News&Events.html">News&nbsp;&&nbsp;Events</a></li>
+                            <li><a id="s5" href="Contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- Header End -->
+    </div>
+    <div class="law-form" style="font-family: Arial, sans-serif; margin: 20px; padding-top: 3%; transition: padding-top 0.3s;">
+        <h3 style="text-align: left; color: #002147;padding: 1%;">Online Law Form Submission</h3>
+    
+        <form style="max-width: 800px; margin: 0 auto; padding: 20px; border: 2px solid #ccc; background-color: #f9f9f9; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <!-- First Name -->
+            <div style="grid-column: span 2;">
+                <label for="full_name" style="display: block; margin-bottom: 3px;">First Name</label>
+                <input type="text" id="full_name" name="full_name" placeholder="First Name" style="width: 100%; padding: 8px; margin-bottom: 5px; border: 1px solid #ccc;">
+            </div>
+    
+            <!-- Last Name -->
+            <div style="grid-column: span 2;">
+                <label for="last_name" style="display: block; margin-bottom: 3px;">Last Name</label>
+                <input type="text" id="last_name" name="last_name" placeholder="Last Name" style="width: 100%; padding: 8px; margin-bottom: 5px; border: 1px solid #ccc;">
+            </div>
+    
+            <!-- Phone Number -->
+            <div>
+                <label for="phone" style="display: block; margin-bottom: 3px;">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000" style="width: 100%; padding: 8px; margin-bottom: 5px; border: 1px solid #ccc;">
+            </div>
+    
+            <!-- Email -->
+            <div>
+                <label for="email" style="display: block; margin-bottom: 3px;">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@example.com" style="width: 100%; padding: 8px; margin-bottom: 5px; border: 1px solid #ccc;">
+            </div>
+    
+            <!-- Street Address -->
+            <div style="grid-column: span 2;">
+                <label for="address" style="display: block; margin-bottom: 3px;">Street Address</label>
+                <input type="text" id="address" name="address" placeholder="Street Address" style="width: 100%; padding: 8px; margin-bottom: 5px; border: 1px solid #ccc;">
+            </div>
+    
+            <!-- Address Line 2 -->
+            <div>
+                <input type="text" id="postalcode" name="postalcode" placeholder="Postal Code" style="width: 100%; padding: 8px; margin-bottom: 5px; border: 1px solid #ccc;">
+            </div>
+    
+            <!-- City -->
+            <div>
+                <input type="text" id="city" name="city" placeholder="City" style="width: 100%; padding: 8px; margin-bottom: 5px; border: 1px solid #ccc;">
+            </div>
+    
+            <!-- State -->
+            <div>
+                <input type="text" id="state" name="state" placeholder="State / Province" style="width: 100%; padding: 8px; margin-bottom: 5px; border: 1px solid #ccc;">
+            </div>
+    
+    
+            <!-- Checkboxes -->
+            <div style="grid-column: span 2;">
+                <p style="margin-bottom: 10px;">I hereby declare to the best of my knowledge that:</p>
+                <div style="margin-bottom: 10px;">
+                    <input type="checkbox" id="conflict1" name="conflict1">
+                    <label for="conflict1"> No action by any present interest (myself or another person) in the selection of contractors has influenced my participation in the program.</label><br><br>
+                    <input type="checkbox" id="conflict2" name="conflict2">
+                    <label for="conflict2"> I have not participated in any form of conflict of interest as it pertains to vendor selection or applicant criteria.</label><br><br>
+                    <input type="checkbox" id="conflict3" name="conflict3">
+                    <label for="conflict3"> Any personal business or partnership I have may be in conflict of interest with the applicant for this program.</label><br><br>
+                </div>
+            </div>
+    
+            <!-- Other Statements -->
+            <div style="grid-column: span 2;">
+                <label for="other_statements" style="display: block; margin-bottom: 3px;">Other Statements</label>
+                <textarea id="other_statements" name="other_statements" rows="4" style="width: 100%; padding: 8px; border: 1px solid #ccc; margin-bottom: 10px;"></textarea>
+            </div>
+    
+            <!-- Date Signed -->
+            <div style="grid-column: span 2;">
+                <label for="date_signed" style="display: block; margin-bottom: 3px;">Date Signed</label>
+                <input type="date" id="date_signed" name="date_signed" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc;">
+            </div>
+    
+            <!-- Submit Button -->
+            <div style="grid-column: span 2;">
+                <button type="submit" style="width: 100%; padding: 10px; background-color: #002147; color: #fff; border: none; cursor: pointer;">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    
+    
+    <script src="legalassests/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+
+    <script src="legalassests/js/queryLoader.js" type="text/javascript"></script>
+
+    <script src="legalassests/js/jquery.parallax-1.1.3.js" type="text/javascript"></script>
+
+    <script src="legalassests/js/jquery.localscroll-1.2.7-min.js" type="text/javascript"></script>
+
+    <script src="legalassests/js/jquery.scrollTo-1.4.2-min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        //stickey header
+        jQuery(function () {
+
+            $(window).scroll(function () {
+                var windscroll = $(window).scrollTop();
+                if (windscroll >= 100) {
+                    $('#warp .section').each(function (i) {
+                        if ($(this).position().top <= windscroll + 150) {
+                            $('.navbar-nav li.active').removeClass('active');
+                            $('.navbar-nav li').eq(i).addClass('active');
+                        }
+                    });
+
+                } else {
+
+                    $('.navbar-nav').removeClass('');
+                    $('.navbar-nav li.active').removeClass('active');
+                    $('.navbar-nav li:first').addClass('active');
+                }
+
+            }).scroll();
+
+            jQuery(window).scroll(function () {
+                var scroll = jQuery(window).scrollTop();
+                if (scroll >= 40) {
+                    jQuery(".subMenu").addClass("smallheader");
+                }
+                else {
+                    jQuery(".subMenu").removeClass("smallheader");
+                }
+            });
+        });
+        $(document).ready(function () {
+            $('#nav').localScroll(800);
+
+
+            //.parallax(xPosition, speedFactor, outerHeight) options:
+            //xPosition - Horizontal position of the element
+            //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+            //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+            $('#banner2').parallax("50%", 0.3);
+            $('#intro').parallax("50%", 0.3);
+            $('#second').parallax("65%", 0.3);
+            $('.bg').parallax("50%", 0.4);
+            $('#third').parallax("60%", 0.0);
+        });
+    </script>
+
+    <script>
+            (function ($) {
+                $('#animatedElement').click(function () {
+                    $(this).addClass("slideUp");
+
+                });
+            });
+    </script>
+
+    <script src="legalassests/js/waypoints.js" type="text/javascript"></script>
+
+    <script src="legalassests/js/jquery.appear.js"></script>
+
+    <script src="legalassests/js/custom.js"></script>
+
+    <script>
+
+        jQuery(function () {
+            jQuery('.subMenu').smint({
+                'scrollSpeed': 1000
+            });
+            jQuery('.carousel').carousel({
+                interval: 2000
+            });
+
+            //navigation menu on mobile hide
+            $(".navbar-default .navbar-nav > li > a").click(function () {
+                $(".navbar-collapse").removeClass('in');
+
+
+            });
+
+
+        });
+
+        jQuery(document).ready(function () {
+            jQuery('ul.da-thumbs > li').hoverdir();
+            //smooth scroll to href value
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                //calculate destination place
+                var dest = 0;
+                if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+                    dest = $(document).height() - $(window).height();
+                } else {
+                    dest = $(this.hash).offset().top;
+                }
+                //go to destination
+                $('html,body').animate({ scrollTop: dest }, 1000, 'swing');
+            });
+        });
+
+    </script>
+
+    <script>
+        $(window).scroll(function () {
+            $('#animatedElement').each(function () {
+                var imagePos = $(this).offset().top;
+
+                var topOfWindow = $(window).scrollTop();
+                if (imagePos < topOfWindow + 400) {
+                    $(this).addClass("slideUp");
+                }
+            });
+
+            jQuery(document).ready(function () {
+                jQuery('.skillbar').each(function () {
+                    jQuery(this).find('.skillbar-bar').animate({
+                        width: jQuery(this).attr('data-percent')
+                    }, 6000);
+                });
+            });
+        });
+    </script>
+
+    <script src="legalassests/js/bootstrap.js"></script>
+
+    <script src="legalassests/js/jquery-hover-effect.js" type="text/javascript"></script>
+
+    <script src="legalassests/js/jquery.smint.js" type="text/javascript"></script>
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script src="legalassests/js/jquery.fancybox.js" type="text/javascript"></script>
+
+    <script src="legalassests/js/jquery.fancybox-media.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+             *  Simple image gallery. Uses default settings
+             */
+
+            $('.fancybox').fancybox($);
+            /*$("#various2,#various3").fancybox({
+                'modal': true,
+                'width': 800,
+                'height': 300,
+                'autoSize': false,
+                openEffect: 'elastic',
+                closeEffect: 'fade'
+            });*/
+
+            /*
+             *  Different effects
+             */
+
+            $(document).ready(function () {
+                $('.fancybox-media').fancybox({
+                    openEffect: 'none',
+                    closeEffect: 'none',
+                    helpers: {
+                        media: {}
+                    }
+                });
+            });
+
+        });
+    </script>
+
+
+
+
+    <script type="text/javascript">
+            (function ($) {
+                QueryLoader.init();
+            });
+    </script>
+
+    <script>
+        (function ($) {
+            if (screen.width < 720) {
+                $('div, img, input, textarea, button, a').removeClass('animate'); // to remove transition
+            }
+        })(jQuery);
+    </script>
+    <script>
+        (function () {
+    $('body').append('<div class="btn btn-primary" style="position: fixed; bottom: 30px; right: 20px; padding: 3px 8px; cursor: pointer; display: block; z-index: 9999; background-color: #a0a09a;">' +
+        '<a href="https://www.whatsapp.com/" target="_blank" style="color:green; font-size:30px; display:block; text-align:center;">' +
+        '<i class="fab fa-whatsapp"></i></a></div>');
+
+    // Apply hover effect
+    $('#toTop').hover(function () {
+        $(this).css('background-color', 'transparent'); // Remove background on hover
+    }, function () {
+        $(this).css('background-color', '#a0a09a'); // Restore background when not hovering
+    });
+
+    $('#toTop').on('click', function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+}());
+
+    </script>
+    
+</body>
+</html>

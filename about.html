@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Form Submission</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="icon" type="image/png" href="legalassests/images/icon.png">
+    <meta name="author" content="Muhammad Nawaz" />
+    <meta name="keywords" content="A Better Legal System,A Broader Perspective.A Business Approach to Legal Service,A Heritage of Results,A large firm with a human touch,A Small Firm That Acts Big,A Tradition of Excellence,Aligned for Excellence,All We Do is Work,Beyond Results,Breakthrough Law,Building Solutions,Built on relationships,Business is our Signature,Business people. Business law, Best Lawyers in Islamabad, Law Firm Islamabad, Law Firm Pakistan" />
+    <meta name="description" content="Corporate & Commercial Lawyers: Rigel Law is originally based in Pakistan and is the registered Law firm. Its foundations have been laid on the basic principles of integrity and excellence for it to shine above all. For every matter at hand, we believe in thorough examination of its facts and relevant laws to provide the best possible advice to our clients in a manner that is effective and efficient" />
+    <link id="color" href="legalassests/css/yellow.css" rel="stylesheet" type="text/css" />
+    <link rel="apple-touch-icon" href="legalassests/images/icon.png" />
+    <link href="legalassests/css/wavex.css" rel="stylesheet" />
+    <link href="legalassests/css/google-maps.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="legalassests/css/web-fonts.css" rel="stylesheet" />
+    <link href="legalassests/css/font-awesome.css" rel="stylesheet" />
+    <link href="legalassests/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="legalassests/css/parallax.css" rel="stylesheet" type="text/css" />
+    <link href="legalassests/css/header.css" rel="stylesheet" type="text/css" />
+    <link href="legalassests/css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="legalassests/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="legalassests/css/form.css" rel="stylesheet" type="text/css" />
+    <link href="legalassests/css/queryLoader.css" rel="stylesheet" type="text/css" />
+    <link href="legalassests/css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />
+    <style>
+        #toTop {
+            position: fixed;
+            bottom: 30px;
+            right: 20px;
+            padding: 5px 10px;
+            cursor: pointer;
+            display: none;
+            z-index: 9999;
+        }
+		blink {
+        animation: blinker 1.5s linear infinite;
+        color: green;
+       }
+		@keyframes blinker {  
+        50% { opacity: 0; }
+       }
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 33%;
+            padding: 10px;
+            text-align: center;
+        }
+
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /*btn-primary*/
+        .btn-primary {
+            color: #fff;
+            background-color: #fcbb3c;
+            border-color: #fba90a;
+        }
+
+            .btn-primary:hover,
+            .btn-primary:focus,
+            .btn-primary.focus,
+            .btn-primary:active,
+            .btn-primary.active,
+            .open > .dropdown-toggle.btn-primary {
+                color: #e89b04;
+                background: transparent;
+                border: 2px solid #e0e0e0;
+            }
+
+        /*common style for all btn*/
+        .btn {
+            border: 2px solid transparent;
+            padding: 6px 13px;
+            border-radius: 2px;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+        .btn-primary:hover,
+        .btn-success:hover,
+        .btn-primary.active,
+        .btn-success.active {
+            background: transparent;
+            border: 2px solid #e0e0e0;
+        }
+
+        .btn-link {
+            color: #fcbb3c;
+        }
+
+            .btn-link:hover {
+                color: #e89b04;
+            }
+
+        .btn:focus,
+        .btn:active:focus,
+        .btn.active:focus,
+        .btn.focus,
+        .btn:active.focus,
+        .btn.active.focus {
+            outline: none;
+        }
+
+        .op-content {
+            display: table-cell !important;
+            vertical-align: middle !important;
+            height: 400px;
+        }
+
+            .op-content p {
+                font-size: 40px;
+                font-weight: 900;
+                text-transform: capitalize;
+                margin-left: 40px;
+            }
+
+        .icon {
+            position: relative;
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 140px;
+            margin-left: 100px;
+        }
+
+        .op-content span {
+            font-size: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div id="warp"></div>
+        <!-- Header -->
+        <div class="subMenu subMenu2" style="top: 40px; position: absolute;">
+            <div class="container">
+                <nav class="navbar navbar-default" role="navigation">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img class="logo" alt="Home Page Icon" src="legalassests/images/logo.jpg" />
+    
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a class="subNavBtn" id="sTop" href="index.html">Home</a></li>
+                            <li><a id="s4" href="form.html">Submit Form</a></li>
+                            <li><a id="s1" href="about.html">About Us</a></li>
+                            <li><a id="s2" href="/legalassests/Practice.html">Practice&nbsp;&nbsp;Areas</a></li>
+                            <li><a id="s3" href="News&Events.html">News&nbsp;&&nbsp;Events</a></li>
+                            <li><a id="s5" href="Contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- Header End -->
+    </div>
+
+        <!-- About Us -->
+        <div class="section s1" style="margin-top: 5rem;">
+            <section class="about" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="title animate fadeIn">
+                                <h1 class="light">We are Rigel Law</h1>
+                                <br />
+                                <h1>Corporate & Commercial Lawyers</h1>
+                                <p class="title-detail">
+                                    Rigel Law is a team of business-focused lawyers delivering innovative solutions aligned to the individual & business’ objectives.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="features">
+                            <div class="col-md-3 animate fadeIn" data-delay="500">
+                                
+                                <i class="material-icons hovicon effect-1 sub-a" style="font-size:70px;">rocket</i>
+
+                                <h4>Introduction</h4>
+                                <p style="text-align: justify">
+                                    Rigel Law is originally based in Pakistan and is the registered Law firm. Its foundations have been laid on
+                                    the basic principles of integrity and excellence for it to shine above all. For every matter at hand, we believe
+                                    in thorough examination of its facts and relevant laws to provide the best possible advice to our clients in a
+                                    manner that is effective and efficient.
+                                </p>
+                            </div>
+                            <div class="col-md-3 animate fadeIn" data-delay="1000">
+                                <i class="material-icons hovicon effect-1 sub-a" style="font-size:70px; background-color: darkgrey;">science</i>
+                                <h4>Our Vision</h4>
+                                <p style="text-align: justify">
+                                    We seek to provide high standard consultancy to our clients in numerous fields of law and business. We aim
+                                    to achieve higher than before and to always grow with our clients. We want our clients to be well adapted and
+                                    prepared for what is coming next in their business and how to take care of it. We have experts who are to lead
+                                    and guide them to earn better fortune if they are to make investments in real estate sector.
+                                </p>
+                            </div>
+                            <div class="col-md-3 animate fadeIn" data-delay="1500">
+                                <i class="fas fa-envelope hovicon effect-1 sub-a"></i>
+                                <h4>Our Mission</h4>
+                                <p style="text-align: justify">
+                                    We at Rigel Law work as a unit, each member fulfilling his purpose in complex structure of legal framework and in
+                                    doing so we make sure that we are reliable and provide the best possible outcomes in all legally possible ways.
+                                    Depending upon each situation we decide whether to act as sword or use shield in order to safeguard the rights
+                                    of our valuable clients.
+                                </p>
+                            </div>
+                            <div class="col-md-3 animate fadeIn" data-delay="2000">
+                                <i class="material-icons hovicon effect-1 sub-a" style="font-size:70px; background-color: darkgray;">local_cafe</i>
+                                <h4>Our Commitment</h4>
+                                <p style="text-align: justify">
+                                    We ensure to stay up to date with the laws, areas of practice that has been mentioned in our website. Our team
+                                    also focuses on research activities side by side especially in areas that need special attention/focus for example
+                                    highlighting the importance of adopting worldwide successful positive policies and laws in field of Business
+                                    laws, International Trade, Human Rights, Tax matters and many more. Importance of such activities cannot be
+                                    ignored especially from Pakistan's point of view in light of CPEC | China-Pakistan Economic Corridor a game changer
+                                    project for South Asia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="experties">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="animate fadeIn">
+                                <h2>Our Experties</h2>
+                                <p class="title-detail">
+                                    We are expert in below areas:
+                                </p>
+                            </div>
+                            <div class="skills">
+                                <div class="skillbar clearfix " data-percent="90%">
+                                    <div class="skillbar-title"><span>Research and analysis</span></div>
+                                    <div class="skillbar-bar" style="width: 90%;"></div>
+                                    <div class="skill-bar-percent animate pulse" data-delay="500">90%</div>
+                                </div>
+                                <!-- End Skill Bar -->
+
+                                <div class="skillbar clearfix " data-percent="95%">
+                                    <div class="skillbar-title dark-title"><span>Resilience and self-confidence</span></div>
+                                    <div class="skillbar-bar bg-dark" style="width: 95%;"></div>
+
+                                    <div class="skill-bar-percent gray animate pulse"
+                                         data-delay="1000">
+                                        95%
+                                    </div>
+                                </div>
+                                <!-- End Skill Bar -->
+                                <div class="skillbar clearfix " data-percent="100%">
+                                    <div class="skillbar-title"><span>Attention to detail</span></div>
+                                    <div class="skillbar-bar" style="width: 100%;"></div>
+                                    <div class="skill-bar-percent animate pulse" data-delay="1500">100%</div>
+                                </div>
+                                <!-- End Skill Bar -->
+
+                                <div class="skillbar clearfix " data-percent="100%">
+                                    <div class="skillbar-title dark-title"><span>Critical Reasoning</span></div>
+                                    <div class="skillbar-bar bg-dark" style="width: 100%;"></div>
+                                    <div class="skill-bar-percent gray animate pulse"
+                                         data-delay="2000">
+                                        100%
+                                    </div>
+                                </div>
+                                <!-- End Skill Bar -->
+                            </div>
+                        </div>
+                            
+                            
+                    </div>
+                </div>
+                
+            </section>
+            <!-- BEGIN TEAM CONTAINER -->
+            <section class="team" id="team">
+                <div class="container text-center">
+                    <!-- BEGIN HEADING -->
+                    <div class="title animate fadeIn">
+                        <h1 class="light">Yes We Are</h1>
+                        <br />
+                        <h1>Creative Team</h1>
+                        <p class="title-detail">
+                           
+                        </p>
+                    </div>
+                    <!-- END HEADING -->
+                    <div class="row">
+                        <div class="col-md-6 animate fadeInLeftBig" data-delay="100">
+                            <!-- BEGIN TEAM -->
+
+                            <div class="team-sec team-sec1">
+                                <div class="member">
+                                    <img src="legalassests/images/mbi.jpg" alt="Muhammad Bilal Ibrahim" class="img-responsive" />
+                                </div>
+                                <div class="detail-left">
+                                    <h4>MUHAMMAD BILAL IBRAHIM</h4>
+                                    <span>PRINCIPAL / CHIEF EXECUTIVE</span>
+                                    <p><b>AREAS OF PRACTICE:</b></p>
+				
+                                  <p>CORPORATE & COMMERCIAL LAWS, INTERNATIONAL LAW, GENERAL LITIGATION, INTERNATIONAL TRADE LAWS, INTERNATIONAL BUSINESS NEGOTIATIONS, CONTRACTS, LAND DISPUTES, PPRA LEGAL MATTERS, ARBITRATION, ENERGY & POWER SECTOR, INTELLECTUAL PROPERTY, CONSTITUTIONAL LAW, TAX LAWS, CUSTOMS & TRADE LAWS, CIVIL LAW AND CRIMINAL LAW.</p>
+                                   <p><strong>PROFILE:</strong></p>
+                                   <p>Muhammad Bilal Ibrahim is the principal and founding partner of Rigel Attorneys At Law And Legal Consultants LLP - Chief Executive RIGEL LAW.</p>
+                                    <p>Muhammad Bilal is a registered advocate High Court. However, prior to becoming a lawyer was in field of Electrical Engineering and has always been excellent in Mathematics. However, He decided to adopt and pursue with the profession of law, so was his passion since long.</p>
+                                    <p>Muhammad Bilal has never looked back since entering into this profession of law in 2014 and has been continuously flourishing in the field of law with each passing day. He has successfully completed his Masters of Law from <b>Berkeley School of Law at University of California, USA.</b> In addition, He has successfully completed two specializations from <b>Berkeley School of Law</b> one in (i) <b>Business Laws</b> and the other one is in (ii) <b>International Laws.</b></p>
+                                    <p>Muhammad Bilal has an experience of working in the legal wing at Ministry of Finance, Government of Pakistan. Before setting up his independent practice, he has worked in two prestigious Law Firms located in Islamabad. His work has always been greatly acknowledged by the clients, peers and seniors in law firm. To gain experience he has worked in almost every area of law in his initial years of practice and independently argued in number of cases.</p>
+                                    <p>Muhammad is fluent in Punjabi, Urdu and English.</p>
+                                    <p><b>Email: </b>mbi@rigellaw.com</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <!-- END TEAM -->
+
+                        <div class="col-md-6 animate fadeInRightBig" data-delay="100">
+                            <!-- BEGIN TEAM -->
+
+                            <div class="team-sec team2">
+                                <div class="member">
+                                    <img alt="CH HASEEB MUHAMMAD" src="legalassests/images/haseeb.jpg" />
+                                </div>
+                                <div class="detail-left">
+                                    <h4>CH HASEEB MUHAMMAD</h4>
+                                    <span>Partner</span>
+                                    <p><b>AREAS OF PRACTICE:</b></p>
+                                    <p>CONSTITUTIONAL LAW, CRIMINAL LAW, CIVIL LAW, SERVICE & LABOR LAW, REVENUE MATTERS, RENT LAWS, FAMILY LAWS, COMMERCIAL DISPUTES, GENERAL LITIGATION, ENERGY & POWER SECTOR, NAB & FIA MATTERS, HUMAN RIGHTS, TERRORISM & REFUGEES LAW, CONTRACTS & TRADE LAWS. </p>
+                                    <p><strong>PROFILE:</strong></p>
+                                    <p>
+                                        Ch Haseeb Muhammad has been in continuous practice of law for more than 25 years. He is an advocate Supreme Court of Pakistan and carries with him a whole lot of exprience. His professional achievements are well resonated with the numerous reported judgements on his name. 
+                                    </p>
+                                    <p>
+                                        He has previously also successfully worked as a Deputy Attorney General (DAG), as an Assistant Attorney General, remained Standing Counsel, Legal Advisor with different departments including semi Government organizations and Autonomus bodies before becoming part of Rigel Law. 
+                                    </p>
+                                    <p>
+                                        He has focused his practice of law in the fields of law mentioned above. Whereas Ch Haseeb has also enjoyed different offices in the Bar Association as he was elected as President of Islamabad High Court Bar Association in year 2020-2021. Earlier in year 2013-2014 he was elected as General Secretary of Islamabad High Court Bar Association and in year 2004-2005 he was elected as Joint Secretary of Islamabad District Bar Association. 
+                                        
+                                        Ch Haseeb has attended several national and international workshops relating to the topic of law. Whereas, he is constant with a motto, to pursue excellence in the domain of law by utilizing his skills dexterously for the betterment and growth of the organization.  
+                                 
+                                    </p>
+                                    <p><strong>Email: </strong>chm@rigellaw.com</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 animate fadeInLeftBig" data-delay="300">
+                            <!-- BEGIN TEAM -->
+
+                            <div class="team-sec team-sec2  team-sec1">
+                                <div class="member">
+                                    <img alt="MOAZZAM ALI" src="legalassests/images/mozzam.jpeg" />
+                                </div>
+                                <div class="detail-left">
+                                    <h4>MOAZZAM ALI</h4>
+                                    <span>Partner</span>
+                                    <p><b>AREAS OF PRACTICE:</b></p>
+                                    <p style="text-transform: uppercase">Service Matters, Media Laws, Telecommunication Laws, General Litigation, Family Laws, Environmental Laws, Civil Law and Criminal Law. </p>
+                                    <p>
+                                        Moazzam Ali has majored in Archaeology from the University of the Punjab. He has obtained degree of LLB from the University of Baha ud Din Zakria Multan.
+                                    </p>
+                                    <p>
+                                        Moazzam has been in practice of Law since he was enrolled as an advocate in year 2008.  He holds a vast experience of working as a lawyer and prior to his independent practice he has been affiliated with famous law chambers in Islamabad and Punjab. He is an active member of Islamabad Bar Association and also a member of Islamabad High Court Bar Association.
+                                    </p>
+                                    <p>
+                                        He brings a complete decade of experience along with him to Rigel Law.
+                                    </p>
+                                    <p><b>Email: </b>moazzamali@rigellaw.com</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="counters">
+                <div class="patteren"></div>
+            </section>
+            <!-- END TEAM CONTAINER -->
+        </div>
+        <!-- About Us End -->
+       
+        <script src="legalassests/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+
+        <script src="legalassests/js/queryLoader.js" type="text/javascript"></script>
+    
+        <script src="legalassests/js/jquery.parallax-1.1.3.js" type="text/javascript"></script>
+    
+        <script src="legalassests/js/jquery.localscroll-1.2.7-min.js" type="text/javascript"></script>
+    
+        <script src="legalassests/js/jquery.scrollTo-1.4.2-min.js" type="text/javascript"></script>
+    
+        <script type="text/javascript">
+            //stickey header
+            jQuery(function () {
+    
+                $(window).scroll(function () {
+                    var windscroll = $(window).scrollTop();
+                    if (windscroll >= 100) {
+                        $('#warp .section').each(function (i) {
+                            if ($(this).position().top <= windscroll + 150) {
+                                $('.navbar-nav li.active').removeClass('active');
+                                $('.navbar-nav li').eq(i).addClass('active');
+                            }
+                        });
+    
+                    } else {
+    
+                        $('.navbar-nav').removeClass('');
+                        $('.navbar-nav li.active').removeClass('active');
+                        $('.navbar-nav li:first').addClass('active');
+                    }
+    
+                }).scroll();
+    
+                jQuery(window).scroll(function () {
+                    var scroll = jQuery(window).scrollTop();
+                    if (scroll >= 40) {
+                        jQuery(".subMenu").addClass("smallheader");
+                    }
+                    else {
+                        jQuery(".subMenu").removeClass("smallheader");
+                    }
+                });
+            });
+            $(document).ready(function () {
+                $('#nav').localScroll(800);
+    
+    
+                //.parallax(xPosition, speedFactor, outerHeight) options:
+                //xPosition - Horizontal position of the element
+                //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+                //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+                $('#banner2').parallax("50%", 0.3);
+                $('#intro').parallax("50%", 0.3);
+                $('#second').parallax("65%", 0.3);
+                $('.bg').parallax("50%", 0.4);
+                $('#third').parallax("60%", 0.0);
+            });
+        </script>
+    
+        <script>
+                (function ($) {
+                    $('#animatedElement').click(function () {
+                        $(this).addClass("slideUp");
+    
+                    });
+                });
+        </script>
+    
+        <script src="legalassests/js/waypoints.js" type="text/javascript"></script>
+    
+        <script src="legalassests/js/jquery.appear.js"></script>
+    
+        <script src="legalassests/js/custom.js"></script>
+    
+        <script>
+    
+            jQuery(function () {
+                jQuery('.subMenu').smint({
+                    'scrollSpeed': 1000
+                });
+                jQuery('.carousel').carousel({
+                    interval: 2000
+                });
+    
+                //navigation menu on mobile hide
+                $(".navbar-default .navbar-nav > li > a").click(function () {
+                    $(".navbar-collapse").removeClass('in');
+    
+    
+                });
+    
+    
+            });
+    
+            jQuery(document).ready(function () {
+                jQuery('ul.da-thumbs > li').hoverdir();
+                //smooth scroll to href value
+                $(".scroll").click(function (event) {
+                    event.preventDefault();
+                    //calculate destination place
+                    var dest = 0;
+                    if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+                        dest = $(document).height() - $(window).height();
+                    } else {
+                        dest = $(this.hash).offset().top;
+                    }
+                    //go to destination
+                    $('html,body').animate({ scrollTop: dest }, 1000, 'swing');
+                });
+            });
+    
+        </script>
+    
+        <script>
+            $(window).scroll(function () {
+                $('#animatedElement').each(function () {
+                    var imagePos = $(this).offset().top;
+    
+                    var topOfWindow = $(window).scrollTop();
+                    if (imagePos < topOfWindow + 400) {
+                        $(this).addClass("slideUp");
+                    }
+                });
+    
+                jQuery(document).ready(function () {
+                    jQuery('.skillbar').each(function () {
+                        jQuery(this).find('.skillbar-bar').animate({
+                            width: jQuery(this).attr('data-percent')
+                        }, 6000);
+                    });
+                });
+            });
+        </script>
+    
+        <script src="legalassests/js/bootstrap.js"></script>
+    
+        <script src="legalassests/js/jquery-hover-effect.js" type="text/javascript"></script>
+    
+        <script src="legalassests/js/jquery.smint.js" type="text/javascript"></script>
+    
+        <!-- Add fancyBox main JS and CSS files -->
+        <script src="legalassests/js/jquery.fancybox.js" type="text/javascript"></script>
+    
+        <script src="legalassests/js/jquery.fancybox-media.js" type="text/javascript"></script>
+    
+        <script type="text/javascript">
+            $(document).ready(function () {
+                /*
+                 *  Simple image gallery. Uses default settings
+                 */
+    
+                $('.fancybox').fancybox($);
+                /*$("#various2,#various3").fancybox({
+                    'modal': true,
+                    'width': 800,
+                    'height': 300,
+                    'autoSize': false,
+                    openEffect: 'elastic',
+                    closeEffect: 'fade'
+                });*/
+    
+                /*
+                 *  Different effects
+                 */
+    
+                $(document).ready(function () {
+                    $('.fancybox-media').fancybox({
+                        openEffect: 'none',
+                        closeEffect: 'none',
+                        helpers: {
+                            media: {}
+                        }
+                    });
+                });
+    
+            });
+        </script>
+    
+    
+    
+    
+        <script type="text/javascript">
+                (function ($) {
+                    QueryLoader.init();
+                });
+        </script>
+    
+        <script>
+            (function ($) {
+                if (screen.width < 720) {
+                    $('div, img, input, textarea, button, a').removeClass('animate'); 
+                }
+            })(jQuery);
+        </script>
+        <script>
+           (function () {
+        $('body').append('<div class="btn btn-primary" style="position: fixed; bottom: 30px; right: 20px; padding: 3px 8px; cursor: pointer; display: block; z-index: 9999; background-color: #a0a09a;">' +
+        '<a href="https://www.whatsapp.com/" target="_blank" style="color:green; font-size:30px; display:block; text-align:center;">' +
+        '<i class="fab fa-whatsapp"></i></a></div>');
+
+    
+    $('#toTop').hover(function () {
+        $(this).css('background-color', 'transparent'); 
+    }, function () {
+        $(this).css('background-color', '#a0a09a');
+    });
+
+    $('#toTop').on('click', function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+}());
+
+        </script>
+</body>
+</html>
